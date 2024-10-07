@@ -46,7 +46,10 @@ body {
   padding: 40px;
 }
 
-.card .main-img {
+.mobile-img{
+    display: none;
+}
+.card .desktop-img {
   width: 100%;
   max-width: 400px;
   object-fit: cover;
@@ -108,12 +111,15 @@ button img {
   .card {
     flex-direction: column;
   }
-  .card .main-img {
+  .desktop-img{
+    display: none;
+  }
+  .card .mobile-img {
+    display: block;
     max-width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
-    height: 400px;
   }
   .card-content {
     padding: 30px;
