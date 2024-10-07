@@ -46,15 +46,14 @@ body {
   padding: 40px;
 }
 
-.mobile-img{
-    display: none;
+.mobile-img {
+  display: none;
 }
 .card .desktop-img {
   width: 100%;
   max-width: 400px;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px 0 0 10px;
 }
 .price {
   display: flex;
@@ -112,15 +111,13 @@ button img {
   .card {
     flex-direction: column;
   }
-  .desktop-img{
+  .desktop-img {
     display: none;
   }
   .card .mobile-img {
     display: block;
     max-width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 0;
+    border-radius: 10px 10px 0 0;
   }
   .card-content {
     padding: 30px;
