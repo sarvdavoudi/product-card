@@ -1,0 +1,121 @@
+:root {
+  --containerColor: rgb(236, 223, 179);
+  --cartColor: white;
+  --priceColor: darkgreen;
+  --transparent: gray;
+  --buttonColor: rgb(52, 104, 52);
+  --buttonTextColor: white;
+}
+@font-face {
+  font-family: outfit;
+  src: url(./fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: YoungSerif;
+  src: url(./fonts/young-serif/YoungSerif-Regular.ttf);
+}
+html {
+  font-size: 18px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: outfit;
+  font-size: 1rem;
+}
+.container {
+  min-height: 100vh;
+  background-color: var(--containerColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: var(--cartColor);
+  width: 90%;
+  margin: 4rem auto;
+  max-width: 800px;
+  height: auto;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.card-content {
+  padding: 40px;
+}
+
+.card .main-img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.price .new-price {
+  color: var(--priceColor);
+  font-weight: 900px;
+  margin-right: 20px;
+}
+.price .old-price {
+  text-decoration: line-through;
+  color: var(--transparent);
+  font-weight: 400;
+}
+h1 {
+  font-family: YoungSerif;
+}
+p {
+  line-height: 1.5;
+  color: var(--transparent);
+}
+label {
+  letter-spacing: 10px;
+  color: var(--transparent);
+}
+button {
+  width: 100%;
+  border: none;
+  background-color: var(--buttonColor);
+  color: var(--buttonTextColor);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  transition: background-color 0.3s ease-out;
+}
+button:hover {
+  background-color: rgb(3, 61, 3);
+}
+
+button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+  .card {
+    flex-direction: column;
+  }
+  .card .main-img {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    height: 400px;
+  }
+  .card-content {
+    padding: 30px;
+  }
+}
